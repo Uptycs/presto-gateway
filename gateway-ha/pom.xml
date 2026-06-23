@@ -35,6 +35,18 @@
     </properties>
 
     <dependencies>
+        <!-- CVE-2022-42889: force commons-text past the vulnerable 1.9 pulled in transitively -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-text</artifactId>
+            <version>1.10.0</version>
+        </dependency>
+        <!-- CVE-2022-1471: force snakeyaml past the vulnerable 1.26 pulled in transitively -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.33</version>
+        </dependency>
         <dependency>
             <groupId>org.jeasy</groupId>
             <artifactId>easy-rules-core</artifactId>
