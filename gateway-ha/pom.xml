@@ -53,11 +53,17 @@
             <artifactId>protobuf-java</artifactId>
             <version>3.25.5</version>
         </dependency>
-        <!-- CVE-2020-36518: force jackson-databind past vulnerable 2.11.3 pulled in transitively -->
+        <!-- CVE-2020-36518: force jackson-databind; 2.15.x required for snakeyaml 2.x compatibility -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.14.3</version>
+            <version>2.15.4</version>
+        </dependency>
+        <!-- Required for snakeyaml 2.x: jackson-dataformat-yaml 2.15+ uses new snakeyaml API -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-yaml</artifactId>
+            <version>2.15.4</version>
         </dependency>
         <dependency>
             <groupId>org.jeasy</groupId>
@@ -77,7 +83,7 @@
         <dependency>
           <groupId>com.fasterxml.jackson.core</groupId>
           <artifactId>jackson-core</artifactId>
-          <version>2.14.3</version>
+          <version>2.15.4</version>
         </dependency>
         <dependency>
             <groupId>com.lyft.data</groupId>
