@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Upload Jar to S3') {
             steps {
-                sh 'aws s3 cp gateway-ha/target/gateway-ha-1.9.5-jar-with-dependencies.jar s3://uptycs-apt-w2-2/presto-gateway/gateway-ha-1.9.5-jar-with-dependencies-v1.jar --acl bucket-owner-full-control'
+                sh 'aws s3 cp gateway-ha/target/gateway-ha-1.9.5-jar-with-dependencies.jar s3://uptycs-apt-w2-2/presto-gateway/gateway-ha-1.9.5-jar-with-dependencies-v2.jar --acl bucket-owner-full-control'
             }
         }
     }
